@@ -64,6 +64,7 @@ export default function XanderPortfolio() {
     { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
+    { id: "leadership", label: "Leadership" },
     { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
   ];
@@ -148,20 +149,32 @@ export default function XanderPortfolio() {
               )}
             </button>
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/XanderHayhoe"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-700/60 bg-white/70 dark:bg-zinc-900/40 size-9"
+              aria-label="GitHub"
             >
               <Github className="size-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/your-handle"
+              href="https://www.linkedin.com/in/alexander-hayhoe/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-700/60 bg-white/70 dark:bg-zinc-900/40 size-9"
+              aria-label="LinkedIn"
             >
               <Linkedin className="size-4" />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-700/60 bg-white/70 dark:bg-zinc-900/40 size-9"
+              aria-label="Resume"
+              title="Resume"
+            >
+              <FileText className="size-4" />
             </a>
           </div>
         </div>
@@ -212,6 +225,8 @@ export default function XanderPortfolio() {
                 </a>
                 <a
                   href="/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-2xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 font-medium"
                 >
                   <FileText className="size-4" /> Resume
@@ -248,9 +263,9 @@ export default function XanderPortfolio() {
             time.
           </p>
           <p>
-            Recently: building XWS (Raspberry Pi self‑hosted PaaS), tuning
+            Recently: building XWS (Raspberry Pi self-hosted PaaS), tuning
             Verilog modules (softmax/div), and polishing TailorMe—a
-            resume‑tailoring tool. Previously at Ford: retention policies &
+            resume-tailoring tool. Previously at Ford: retention policies &
             cleanup that reclaimed <strong>2+ PB</strong> of storage, new
             Jenkins Windows node, and AOSP dev images.
           </p>
@@ -263,7 +278,7 @@ export default function XanderPortfolio() {
           {[
             {
               name: "XWS — Xander Web Services",
-              desc: "Self‑hosted platform on a Raspberry Pi 4 for app hosting, preview builds, and CI/CD pipelines (Dokku → custom).",
+              desc: "Self-hosted platform on a Raspberry Pi 4 for app hosting, preview builds, and CI/CD pipelines (Dokku → custom).",
               tags: ["Dokku", "GitHub Actions", "Traefik", "Postgres"],
               links: { github: "#", live: "#" },
             },
@@ -275,7 +290,7 @@ export default function XanderPortfolio() {
             },
             {
               name: "XanDB",
-              desc: "Toy database in Python (ex‑C++) with a structured API and networked access; focus on indexing & query plan basics.",
+              desc: "Toy database in Python (ex-C++) with a structured API and networked access; focus on indexing & query plan basics.",
               tags: ["Python", "Databases", "Flask"],
               links: { github: "#", live: "#" },
             },
@@ -287,7 +302,7 @@ export default function XanderPortfolio() {
             },
             {
               name: "Teensy 4.1 Makefile Boilerplate",
-              desc: "Portable .c/.h Makefile project with OS‑aware flashing via teensy_loader_cli; fast iteration loop.",
+              desc: "Portable .c/.h Makefile project with OS-aware flashing via teensy_loader_cli; fast iteration loop.",
               tags: ["C", "Makefile", "Teensy"],
               links: { github: "#", live: "#" },
             },
@@ -341,28 +356,51 @@ export default function XanderPortfolio() {
         </div>
       </Section>
 
-      {/* Experience */}
+      {/* Experience (from resume) */}
       <Section id="experience" eyebrow="history" title="Experience">
         <div className="space-y-4">
           {[
             {
-              role: "Software Engineering Intern (Infra)",
+              role: "DevSecOps Engineer Intern",
               org: "Ford Motor Company",
+              location: "Waterloo, Ontario",
               time: "May 2025 – Aug 2025",
               bullets: [
-                "Reclaimed 2+ PB by automating Artifactory retention & cleanup across teams.",
-                "Built hardened Windows Jenkins node for Unreal/Win toolchains.",
-                "Shipped updated AOSP dev images (20 → 22) for security & tooling.",
+                "Designed retention policies and automated cleanup (Bash, Python), reducing >2 PB of waste from JFrog Artifactory across prod.",
+                "Built a Dockerized AOSP development environment to migrate Ubuntu 20.04 → 22.04, improving security compliance and tooling.",
+                "Engineered dynamic Jenkins Windows build nodes (PowerShell, Groovy) enabling scalable pipelines for embedded/MSBuild toolchains.",
               ],
             },
             {
-              role: "Embedded & AV Projects",
-              org: "WATonomous + Personal",
-              time: "2024 – 2025",
+              role: "Infrastructure Developer Intern",
+              org: "Ford Motor Company",
+              location: "Waterloo, Ontario",
+              time: "Sept 2024 – Dec 2024",
               bullets: [
-                "Custom ROS2 messages (Twist+string), CAN gateway integration.",
-                "Teensy 4.1 Makefile stack with cross‑platform flashing.",
-                "Ethernet/CAN comms, graceful degradation strategies.",
+                "Provisioned self-hosted JFrog with Terraform + Packer; cut storage costs by 53%/TB and boosted transfer speeds ~5×.",
+                "Designed GitHub Actions runners for Windows builds supporting three infotainment teams.",
+                "Migrated Windows provisioners from PowerShell to Packer + Ansible; deployed GCP LBs, buckets, and build nodes.",
+              ],
+            },
+            {
+              role: "Software Developer Intern",
+              org: "Ford Motor Company",
+              location: "Waterloo, Ontario",
+              time: "Jan 2024 – Apr 2024",
+              bullets: [
+                "Optimized Docker builds (-30% image size, up to 50% faster) with hardened security.",
+                "Automated creation/testing/verification of 1000+ LFS PRs for GitHub Cloud → Artifactory migration.",
+                "Engineered a CI/CD monorepo with GitHub Actions implementing recursive downstream builds across dev/QA/prod.",
+              ],
+            },
+            {
+              role: "Software Engineering Intern",
+              org: "PRGX",
+              location: "Toronto, Ontario",
+              time: "May 2023 – Aug 2023",
+              bullets: [
+                "Partnered with auditors on data delivery optimization; ensured data integrity with VBA + Python.",
+                "Improved key SQL/Python pipelines with >20% runtime reduction.",
               ],
             },
           ].map((e) => (
@@ -378,6 +416,67 @@ export default function XanderPortfolio() {
                   <span className="text-sm text-zinc-600 dark:text-zinc-400">
                     {e.time}
                   </span>
+                </div>
+                <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {e.location}
+                </div>
+                <ul className="mt-3 list-disc pl-5 space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                  {e.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* Leadership & Research */}
+      <Section
+        id="leadership"
+        eyebrow="teams & research"
+        title="Leadership & Research"
+      >
+        <div className="space-y-4">
+          {[
+            {
+              role: "Vehicle Platform Director — Embedded & Power Systems",
+              org: "WATonomous",
+              location: "Waterloo, Ontario",
+              time: "May 2024 – Present",
+              bullets: [
+                "Led embedded development transforming a KIA Soul into an autonomous platform; built computer-to-car communication.",
+                "Implemented joystick tele-op and wrote arbiter + MUX nodes in ROS2/C++ for priority bus writes.",
+                "Interfaced 6 FLIR cameras and a VLP-32 in C++ (PCI, PoE), ingesting ~12 GiB/s of data.",
+              ],
+            },
+            {
+              role: "Firmware Team Lead",
+              org: "Waterloop",
+              location: "Waterloo, Ontario",
+              time: "May 2023 – Jul 2024",
+              bullets: [
+                "Architected STM32F7 + Raspberry Pi 4 system for high-voltage hyperloop operations.",
+                "Built Node.js backend over RFCOMM and a C++ CLI for manual control/integration testing.",
+                "Multithreaded RPi state machine and listeners, achieving full CPU utilization.",
+              ],
+            },
+          ].map((e) => (
+            <Card key={e.role}>
+              <div className="p-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-lg font-semibold">
+                    {e.role} ·{" "}
+                    <span className="text-zinc-600 dark:text-zinc-400">
+                      {e.org}
+                    </span>
+                  </h3>
+                  <span className="text-sm text-zinc-600 dark:text-zinc-400">
+                    {e.time}
+                  </span>
+                </div>
+                <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {e.location}
                 </div>
                 <ul className="mt-3 list-disc pl-5 space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
                   {e.bullets.map((b) => (
@@ -434,13 +533,15 @@ export default function XanderPortfolio() {
             </div>
             <div className="flex gap-3">
               <a
-                href="mailto:you@example.com"
+                href="mailto:xanderhayhoe@gmail.com"
                 className="inline-flex items-center gap-2 rounded-2xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-4 py-2 font-medium"
               >
                 <Mail className="size-4" /> Email me
               </a>
               <a
                 href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-2xl border border-zinc-300 dark:border-zinc-700 px-4 py-2 font-medium"
               >
                 <FileText className="size-4" /> Resume
