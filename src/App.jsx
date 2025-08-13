@@ -197,9 +197,7 @@ export default function XanderPortfolio() {
                 Xander Hayhoe
               </motion.h1>
               <p className="mt-4 text-lg sm:text-xl text-zinc-700 dark:text-zinc-300 max-w-xl">
-                Infra / Embedded / Systems. I build reliable pipelines, fast
-                firmware, and clean UIs. Currently leveling up DevOps and
-                hardware skills.
+                I build reliable pipelines
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Chip>
@@ -258,16 +256,21 @@ export default function XanderPortfolio() {
           <p>
             I'm a Computer Engineering student at the University of Waterloo
             with a thing for infrastructure, embedded systems, and clean
-            tooling. I've built CI/CD for large orgs, written firmware that
-            talks over CAN and Ethernet, and shipped little tools that save big
-            time.
+            tooling. I've built CI/CD pipelines for large orgs, written firmware
+            that talks over CAN and Ethernet, and shipped tools that save many
+            headaches for developers.
           </p>
           <p>
-            Recently: building XWS (Raspberry Pi self-hosted PaaS), tuning
-            Verilog modules (softmax/div), and polishing TailorMe—a
-            resume-tailoring tool. Previously at Ford: retention policies &
-            cleanup that reclaimed <strong>2+ PB</strong> of storage, new
-            Jenkins Windows node, and AOSP dev images.
+            Recently: building XWS (Raspberry Pi self-hosted PaaS) and
+            Infrastructure for WATonomous.
+          </p>
+          <p>
+            Previously at Ford, I created retention policies & cleanup
+            automations that reclaimed <strong>2+ PB</strong> of storage,
+            Dynamic windows nodes in jenkins and GitHub Actions, created several
+            docker images to service development teams across ubuntu20,22,24
+            environments, and created many internal tools to simplify developer
+            workflows.
           </p>
         </div>
       </Section>
